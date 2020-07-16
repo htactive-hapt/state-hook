@@ -1,38 +1,37 @@
-.App {
-  text-align: center;
-}
+/* import React, { useReducer } from 'react';
+import './App.css';
+import ComponentA from './userReducer/ComponentA';
+import ComponentB from './userReducer/ComponentB';
+import ComponentC from './userReducer/ComponentC';
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+export const CountContext = React.createContext()
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+const initialState = 0;
+const countReducer = (state, action) => {
+  switch (action) {
+    case 'increment':
+      return state + 1
+    case 'decrement':
+      return state - 1
+    case 'reset':
+      return initialState
+    default:
+      return state
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+const App = () => {
+  const [count, dispatch] = useReducer(countReducer, initialState);
+  return (
+    <CountContext.Provider value={{ countState: count, countDispatch: dispatch }}>
+      <div className="App">
+        <div>Count {count}</div>
+        <ComponentA />
+        <ComponentB />
+        <ComponentC />
+      </div>
+    </CountContext.Provider>
+  );
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+export default App; */
